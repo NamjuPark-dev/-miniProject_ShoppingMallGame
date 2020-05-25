@@ -1,0 +1,69 @@
+:root {
+  --side-padding: 10px;
+  --side-margin: 8px;
+  --img-size: 30px;
+  --logo-size: 100px;
+  --color-dark-gray: #3c3e3c;
+  --color-pink: #fd7792;
+  --color-blue: #035aa6;
+  --color-yellow: #ffd800;
+  --color-white: #faf9f9;
+  --size-small: 6px;
+  --size-medium: 10px;
+  --size-large: 14px;
+  --list-width: 100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-dark-gray);
+}
+img {
+  width: var(--img-size);
+  height: var(--img-size);
+}
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  width: var(--logo-size);
+  height: var(--logo-size);
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  padding: var(--side-padding) 0px;
+}
+.icons img,
+.icons button {
+  margin-right: var(--side-margin);
+}
+.icons button {
+  border: none;
+  border-radius: var(--size-small);
+  font-size: var(--size-large);
+}
+.blue_Btn {
+  background-color: var(--color-blue);
+}
+.pink_Btn {
+  background-color: var(--color-pink);
+}
+.yellow_Btn {
+  background-color: var(--color-yellow);
+}
+.itemList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemList div {
+  background-color: var(--color-white);
+  margin: var(--side-margin) 0px;
+  padding: calc(var(--side-padding) / 2) var(--side-padding);
+  border-radius: var(--size-small);
+}
