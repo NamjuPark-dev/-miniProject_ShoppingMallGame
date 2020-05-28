@@ -11,7 +11,8 @@
   --size-small: 6px;
   --size-medium: 10px;
   --size-large: 14px;
-  --list-width: 100px;
+  --list-width: 300px;
+  --list-height: 500px;
 }
 * {
   margin: 0;
@@ -20,6 +21,10 @@
 }
 body {
   background-color: var(--color-dark-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 img {
   width: var(--img-size);
@@ -28,6 +33,7 @@ img {
 .logo {
   display: flex;
   justify-content: center;
+  padding-top: var(--side-padding);
 }
 .logo img {
   width: var(--logo-size);
@@ -38,13 +44,15 @@ img {
   justify-content: center;
   padding: var(--side-padding) 0px;
 }
-.icons img,
+.icons img {
+  margin-right: calc(var(--side-margin) * 2);
+}
 .icons button {
   margin-right: var(--side-margin);
 }
 .icons button {
   border: none;
-  border-radius: var(--size-small);
+  padding: calc(var(--side-padding) / 2);
   font-size: var(--size-large);
 }
 .blue_Btn {
@@ -60,10 +68,26 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: var(--side-padding);
+  width: var(--list-width);
+  height: var(--list-height);
+  overflow-y: scroll;
 }
 .itemList div {
   background-color: var(--color-white);
   margin: var(--side-margin) 0px;
-  padding: calc(var(--side-padding) / 2) var(--side-padding);
+  padding: calc(var(--side-padding) / 2) 0px;
   border-radius: var(--size-small);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.itemList div img {
+  margin: 0px calc(var(--side-margin) * 2);
+}
+.itemList div span {
+  font-size: var(--size-large);
+}
+::-webkit-scrollbar {
+  display: none;
 }
